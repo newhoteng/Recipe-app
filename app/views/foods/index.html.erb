@@ -3,21 +3,25 @@
 
 <div class='foodindex-container'>
   <%= link_to "Add food", new_food_path, class: 'add-btn' %>
-  <table>
-    <thead>
-      <tr>
-        <th>Food</th>
-        <th>Measurement unit</th>
-        <th>Unit price</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @foods.each do |food| %>
-        <%= render food %>
-      <% end %>
-    </tbody>
-  </table>
+  <% if @foods.empty? %>
+    <h2 class="text-center">The list is empty.</h2>
+  <% else %>
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Measurement unit</th>
+          <th>Unit price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @foods.each do |food| %>
+          <%= render food %>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
 </div>
 
 
