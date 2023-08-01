@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  before_action :set_recipe, only: [:show,  :update]
+
   def index
     @recipes = Recipe.includes([:user]).where(user_id: current_user.id).order(created_at: :desc)
   end
@@ -6,6 +8,15 @@ class RecipesController < ApplicationController
   def new
     @user = current_user
     @recipe = Recipe.new
+  end
+
+  def update
+    if @recipe.update(recipe_params)
+      respond_to do |format|
+        format.html { redirect_to @recipe, notice: "Recipe was successfully updated." }
+        format.js   # Handles AJAX response
+      end
+    end
   end
 
   def create
@@ -34,6 +45,10 @@ class RecipesController < ApplicationController
   end
 
   private
+
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
 
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
