@@ -6,9 +6,6 @@ nav {
   padding: 1rem;
   color: cadetblue;
   box-shadow: 0 5px 5px #e5e5e5;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 nav a {
