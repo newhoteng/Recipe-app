@@ -18,6 +18,10 @@ class RecipesController < ApplicationController
     end
   end
 
+  def show
+    @recipe = Recipe.includes([:user]).find(params[:id])
+    @recipe_foods = @recipe.recipe_foods.includes([:food])
+  end
   
   def public
     @public_recipes = Recipe.includes([:user]).where(public: true).order(created_at: :desc)
