@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag 'foodindex' %>
+<p style="color: green"><%= notice %></p>
+
+<div class='foodindex-container'>
+  <%= link_to "Add food", new_food_path, class: 'add-btn' %>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Measurement unit</th>
+        <th>Unit price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @foods.each do |food| %>
+        <%= render food %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+
