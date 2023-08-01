@@ -2,7 +2,7 @@
   padding: 4rem 1rem;
 }
 
-.foodindex-container table {
+table {
   border-collapse: collapse;
   margin: 4rem auto;
 }
@@ -29,4 +29,13 @@ tbody tr:nth-child(odd) {
   padding: 0.5rem;
   margin-left: 80%;
   text-decoration: none;
+}
+
+.foodindex-container .delete-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
 }
