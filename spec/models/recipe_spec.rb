@@ -7,8 +7,8 @@ RSpec.describe Recipe, type: :model do
     @user.save
   end
   it 'is valid' do
-    recipe = Recipe.new(name: 'Miso Paste', preparation_time: '6 months', cooking_time: '2 hours',
-                        description: 'Test', public: false, user_id: @user.id)
+    recipe = Recipe.new(name: 'Miso Paste', preparation_time: '6 months', cooking_time: '2 hours', description: 'Test',
+                        public: false, user_id: @user.id)
     expect(recipe).to be_valid
   end
   it 'should not be valid without a name' do
@@ -27,8 +27,8 @@ RSpec.describe Recipe, type: :model do
     expect(recipe).to_not be_valid
   end
   it 'should not be valid without a description' do
-    recipe = Recipe.new(name: 'Miso Paste', preparation_time: '6 months', cooking_time: '2 hours',
-                        description: nil, public: false, user_id: @user.id)
+    recipe = Recipe.new(name: 'Miso Paste', preparation_time: '6 months', cooking_time: '2 hours', description: nil,
+                        public: false, user_id: @user.id)
     expect(recipe).to_not be_valid
   end
 end
