@@ -15,6 +15,7 @@ class FoodsController < ApplicationController
   # POST /foods
   def create
     @food = current_user.foods.new(food_params)
+    @food.name = @food.name.titleize
 
     if @food.save
       redirect_to foods_url, notice: 'Food was successfully created.'
