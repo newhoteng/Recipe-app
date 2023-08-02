@@ -39,3 +39,13 @@ tbody tr:nth-child(odd) {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* Shopping list styling */
+.shopping-container {
+  padding: 0 4rem;
+}
+
+.shopping-summary {
+  display: flex;
+  justify-content: space-between;
+}

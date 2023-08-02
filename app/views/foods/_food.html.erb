@@ -2,6 +2,6 @@
   <td><%= food.name %></td>
   <td><%= food.quantity %></td>
   <td><%= food.measurement_unit %></td>
-  <td>$ <%= number_with_precision(food.price, precision: 2) %></td>
+  <td><%= number_to_currency(food.price) %></td>
   <td><%= button_to "Delete", food, method: :delete, class: 'delete-link' %></td>
 </tr>

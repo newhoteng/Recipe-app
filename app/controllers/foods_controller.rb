@@ -42,20 +42,3 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
   end
 end
-
-# <%= link_to "Get started", { id: "store-sign-up" } %>
-
-# document.addEventListener("DOMContentLoaded", () => {
-#   var modal = document.querySelector('.modal')
-#   var el =  document.getElementById("store-sign-up")
-
-#   if(el) {
-#     document.getElementById("store-sign-up").addEventListener('click', () => {
-#       modal.classList.remove('modal--hidden');
-#     });
-
-#     document.querySelector(".close-modal").addEventListener('click', () => {
-#       modal.classList.add('modal--hidden');
-#     });
-#   }
-# });
