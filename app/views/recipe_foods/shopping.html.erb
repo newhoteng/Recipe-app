@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<div class='shopping-container'>
+  <% if @lists.empty? %>
+    <h2 class="text-center">Your shopping list is empty.</h2>
+  <% else %>
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @lists.each do |item| %>
+          <tr>
+            <td><%= item.food.name %></td>
+            <td><%= item.quantity %> <%= item.food.measurement_unit %></td>
+            <td>$ <%= food.price %></td>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>

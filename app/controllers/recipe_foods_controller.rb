@@ -42,6 +42,10 @@ class RecipeFoodsController < ApplicationController
     redirect_to user_recipe_url(@recipe.user, @recipe)
   end
 
+  def shopping
+    @lists = []
+  end
+
   private
 
   def recipe_update_params
