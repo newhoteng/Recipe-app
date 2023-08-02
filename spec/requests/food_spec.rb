@@ -2,12 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'Foods', type: :request do
   before(:example) do
-    @user = User.create(name: 'Harriet', email: 'exa@email.com', password: 'password', password_confirmation: 'password')
+    @user = User.first
     sign_in @user
   end
 
   describe 'GET /index when user is signed in' do
     it 'returns http success if signed in' do
+      sign_in @user
       get '/foods'
       expect(response).to have_http_status(:success)
       expect(response.status).to eq(200)

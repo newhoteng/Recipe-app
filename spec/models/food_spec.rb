@@ -9,7 +9,8 @@ RSpec.describe Food, type: :model do
   end
 
   describe 'validations' do
-    user = User.create(name: 'Harriet', email: 'exam@email.com', password: 'password', password_confirmation: 'password')
+    user = User.create(name: 'Harriet', email: 'exam@email.com', password: 'password',
+                       password_confirmation: 'password')
     subject { Food.new(name: 'Apple', measurement_unit: 'grams', price: 5, quantity: 20, user_id: user.id) }
 
     it 'name should be present' do
