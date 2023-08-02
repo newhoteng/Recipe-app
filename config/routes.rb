@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  # get 'user/index'
-  # get 'user/show'
   resources :foods
   get 'general_shopping_list', to: 'users#shopping_list'
   resources :users do

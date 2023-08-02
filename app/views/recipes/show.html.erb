@@ -23,11 +23,8 @@
     </div>
   </div>
   <div class="mt-5 d-flex justify-content-around">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">
-      Generate shopping list
-    </button>
+    
 
-  
     <% if can? :update, @recipe %>
       <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@recipe.user, @recipe), class: "btn btn-danger" %>
     <% end %>
