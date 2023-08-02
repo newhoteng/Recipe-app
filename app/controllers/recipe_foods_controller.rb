@@ -30,10 +30,6 @@ class RecipeFoodsController < ApplicationController
     end
   end
 
-  def show
-    @recipe_food = RecipeFood.find(params[:id])
-  end
-
   def destroy
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.find(params[:id])
