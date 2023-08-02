@@ -2,7 +2,9 @@
 <header>
   <nav>
     <%= link_to "Foods", foods_path %>
-    <%= link_to "Recipes", user_recipes_path(user_id: current_user.id) %>
+    <% if user_signed_in?%>
+    <%= link_to "Recipes", user_recipes_path(current_user) %>
+    <% end%>
     <%= link_to "Public Recipes", root_path %>
     <%= link_to "Shopping List", general_shopping_list_path %>
     <% if user_signed_in? %>
