@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
   before :each do
-    @user = User.create(name: 'Abebe', email: 'abebe@email.com', password: 'abebe123', password_confirmation: 'abebe123')
+    @user = User.create(name: 'Abebe', email: 'abebe@email.com', password: 'abebe123',
+                        password_confirmation: 'abebe123')
     @user.save
   end
   it 'is valid' do
