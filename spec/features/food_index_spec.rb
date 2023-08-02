@@ -7,7 +7,7 @@ RSpec.describe 'Food index page', type: :feature do
     Food.create(name: 'Apple', measurement_unit: 'grams', price: 5, quantity: 4, user_id: @user.id)
     Food.create(name: 'Pineapple', measurement_unit: 'grams', price: 1, quantity: 2, user_id: @user.id)
     Food.create(name: 'Chicken breast', measurement_unit: 'units', price: 2, quantity: 1, user_id: @user.id)
-    visit foods_path(user_id = @user.id)
+    visit foods_path
   end
 
   describe "page's content" do
