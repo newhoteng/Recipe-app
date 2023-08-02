@@ -4,7 +4,7 @@
 <div class='foodindex-container'>
   <%= link_to "Add food", new_food_path, class: 'add-btn' %>
   <% if @foods.empty? %>
-    <h2 class="text-center">The list is empty.</h2>
+    <p class="text-center"> <i> Your food list is empty </i></p>
   <% else %>
     <table>
       <thead>
