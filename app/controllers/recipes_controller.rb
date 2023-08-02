@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show,  :update]
+  before_action :set_recipe, only: %i[show update]
 
   def index
     @recipes = Recipe.includes([:user]).where(user_id: current_user.id).order(created_at: :desc)
@@ -11,11 +11,11 @@ class RecipesController < ApplicationController
   end
 
   def update
-    if @recipe.update(recipe_params)
-      respond_to do |format|
-        format.html { redirect_to @recipe, notice: "Recipe was successfully updated." }
-        format.js   # Handles AJAX response
-      end
+    return unless @recipe.update(recipe_params)
+
+    respond_to do |format|
+      format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
+      format.js # Handles AJAX response
     end
   end
 
@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.includes([:user]).find(params[:id])
     @recipe_foods = @recipe.recipe_foods.includes([:food])
   end
-  
+
   def public
     @public_recipes = Recipe.includes([:user]).where(public: true).order(created_at: :desc)
   end
