@@ -12,10 +12,10 @@
       </div>
     </div>
     <div class="recipe-stat col-md-3">
-       <h3><% if @recipe.public %>Private<%else%>Public<%end%></h2>
+       <h3><% if @recipe.public? %>Public<%else%>Private<%end%></h2>
       <% if can? :update, @recipe %>
         <label class="switch">
-          <input type="checkbox" <%= @recipe.public? ? '' : 'checked' %> disabled>
+          <input type="checkbox" <%= @recipe.public? ? 'checked' : '' %> disabled>
           <span class="slider round"></span>
         </label>
       <% end %>
