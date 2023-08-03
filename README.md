@@ -81,7 +81,7 @@ Install this project with:<br>
   bundle install
 ```
 
-### 💾 Database
+### Database
 
 Create the databases and run migrations with:
 
