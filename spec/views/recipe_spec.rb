@@ -5,7 +5,7 @@ RSpec.describe 'test recipe/index', type: :feature do
     @user = User.first
     sign_in @user
     @recipe = Recipe.create(name: 'Shiro', preparation_time: '6 months', cooking_time: '2 hours', description: 'Test',
-      public: true, user_id: @user.id)
+                            public: true, user_id: @user.id)
   end
 
   scenario 'recipe name test' do

@@ -51,7 +51,6 @@ class RecipesController < ApplicationController
     redirect_to user_recipe_path(id: @recipe.id, user_id: current_user.id)
   end
 
-
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
