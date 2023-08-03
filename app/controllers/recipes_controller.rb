@@ -38,6 +38,19 @@ class RecipesController < ApplicationController
     @public_recipes = Recipe.includes([:user]).where(public: true).order(created_at: :desc)
   end
 
+  def toggle
+    @recipe = Recipe.find(params[:id])
+    @recipe.public = !@recipe.public
+    text = @recipe.public? ? 'public' : 'private'
+
+    if @recipe.save
+      flash[:notice] = "#{@recipe.name} is now #{text}!"
+    elsif @recipe.errors.any?
+      flash[:alert] = @recipe.errors.full_messages.first
+    end
+    redirect_to user_recipe_path(id: @recipe.id, user_id: current_user.id)
+  end
+
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
