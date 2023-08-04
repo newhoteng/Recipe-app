@@ -6,6 +6,7 @@
   - [🛠️ Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Live Staging](#live-staging)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -48,6 +49,11 @@ Recipe-app is an app keeps track of all your recipes, ingredients, and inventory
   - Ability create a recipe
   - List of recipes
   - Ability to create shopping list based on list of foods and recipes
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## :rocket: Live Staging
+- [Staging link](https://recipe-app-nnpo.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
