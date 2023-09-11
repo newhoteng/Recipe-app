@@ -6,7 +6,7 @@
   - [🛠️ Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-- [🚀 Live Staging](#live-staging)
+<!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -52,10 +52,11 @@ Recipe-app is an app keeps track of all your recipes, ingredients, and inventory
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## :rocket: Live Staging
-- [Staging link](https://recipe-app-nnpo.onrender.com)
+<!-- ## :rocket: Live Demo
+- Pending -->
+<!-- - [Live Demo](https://recipe-app-nnpo.onrender.com) -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 ## :computer: Getting Started <a name="getting-started"></a>
 To get a local copy up and running, follow these steps.<br>
